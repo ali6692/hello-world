@@ -14,19 +14,8 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function (){
-    return view('welcome');
+Route::get('/{name?}',function($name=null){
+    $data=compact('name');
+    return view('home')->with($data);
 });
-Route::get('/demo/{name}/{id?}', function ($name,$id = null){
-    $data= compact('name','id');
-    print_r($data);
-});
-Route::any('/test',function (){
-    echo "Testing the route";
-});
-//Route::put('/users/{id}',function($id){
-//});
-//Route::patch();
-//Route::delete('/users/{id}',function($id){
-//});
 
