@@ -19,8 +19,13 @@ use Inertia\Inertia;
 //     return view('home')->with($data);
 // });
 
-// Route::get('/', [App\Http\Controllers\HomeController::class, 'edit']);
-Route::get('/result-create', [App\Http\Controllers\HomeController::class, 'create']);
-Route::get('/result/{id}', [App\Http\Controllers\HomeController::class, 'show']);
-Route::get('/result-edit/{id}', [App\Http\Controllers\HomeController::class, 'edit']);
-Route::get('/result-delete/{id}', [App\Http\Controllers\HomeController::class, 'delete']);
+//Route::get('/', [App\Http\Controllers\HomeController::class, 'edit']);
+Route::get('/customers-create', [App\Http\Controllers\HomeController::class, 'create']);
+Route::get('/customers/{id}', [App\Http\Controllers\HomeController::class, 'show']);
+Route::get('/customers-edit/{id}', [App\Http\Controllers\HomeController::class, 'edit']);
+Route::get('/customers-delete/{id}', [App\Http\Controllers\HomeController::class, 'delete']);
+//Route::get('/customers',function(){
+    //$customers= Customer::all();
+    //echo "<pre>";
+    //print_r($customers->toArray());
+//});

@@ -13,48 +13,48 @@ class HomeController extends Controller
 
     public function create()
     {
-        $result =  \App\Models\result::create([
-            'Name' => 'Faraz Ali Khan',
-            'Age'=>27,
-            'Gender'=>'M',
-            'father_name' => 'ABC',
-            'Category' => 'Regular',
-            'Course' => 'M.Sc in Banking & Financial Analytics',
-            'Grade'=>'A',
-            'address'=>'I 42 A Abul Fazal Enclave Jamia Nagar'
+        $customers =  \App\Models\Customer::create([
+            'name' => 'Faraz Ali Khan',
+            'email'=>'farazmsi2014@gmail.com',
+            'gender'=>'M',
+            'address'=>'I 42 A Abul Fazal Enclave Jamia Nagar',
+            'dob'=>'1995-09-28',
+            'password'=>'pqr'
+            
+
+            
+            
         ]);
 
-        return $result;
+        return $customers;
     }
 
     public function show($id)
     {
-        $result = \App\Models\result::find($id);
+        $customers = \App\Models\Customer::find($id);
 
-        return $result;
+        return $customers;
     }
 
     public function edit($id)
     {
-        $result = \App\Models\result::find($id);
-        $result->Name='Bhavjot Singh';
-        $result->Age=26;
-        $result->Gender='M';
-        $result->father_name='XYZ';
-        $result->Category='Correspondence';
-        $result->Course='MCA';
-        $result->Grade='A';
-        $result->address='Shiv Park Janakpuri';
-        $result->save();
-        return $result;
+        $customers = \App\Models\Customer::find($id);
+        $customers->name='Bhavjot Singh';
+        $customers->email='xyz@gmail.com';
+        $customers->gender='M';
+        $customers->address='XYZ';
+        $customers->dob='1996-02-02';
+        $customers->password='mno';
+        $customers->save();
+        return $customers;
     }
 
     public function delete($id)
     {
-        $result = \App\Models\result::find($id);
+        $customers = \App\Models\Customer::find($id);
 
-        $result->delete();
+        $customers->delete();
 
-        return 'result deleted';
+        return 'customer deleted';
     }
 }

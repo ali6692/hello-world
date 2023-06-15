@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('Name');
             $table->integer('Age');
             $table->enum('Gender',["M","F","O"]);
-            $table->string('Father name');
+            $table->string('father_name');
             $table->string('Category');
             $table->string('Course');
             $table->string('Grade');
