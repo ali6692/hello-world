@@ -14,18 +14,9 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Route::get('/{name?}',function($name=null){
-//     $data=compact('name');
-//     return view('home')->with($data);
-// });
+// 
 
-//Route::get('/', [App\Http\Controllers\HomeController::class, 'edit']);
-Route::get('/customers-create', [App\Http\Controllers\HomeController::class, 'create']);
-Route::get('/customers/{id}', [App\Http\Controllers\HomeController::class, 'show']);
-Route::get('/customers-edit/{id}', [App\Http\Controllers\HomeController::class, 'edit']);
-Route::get('/customers-delete/{id}', [App\Http\Controllers\HomeController::class, 'delete']);
-//Route::get('/customers',function(){
-    //$customers= Customer::all();
-    //echo "<pre>";
-    //print_r($customers->toArray());
-//});
+Route::get('/registration-create', [App\Http\Controllers\HomeController::class, 'create']);
+Route::get('/registration/{id}', [App\Http\Controllers\HomeController::class, 'show']);
+Route::get('/registration-edit/{id}', [App\Http\Controllers\HomeController::class, 'edit']);
+Route::get('/registration-delete/{id}', [App\Http\Controllers\HomeController::class, 'delete']);

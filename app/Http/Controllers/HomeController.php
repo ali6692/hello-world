@@ -13,11 +13,11 @@ class HomeController extends Controller
 
     public function create()
     {
-        $customers =  \App\Models\Customer::create([
-            'name' => 'Faraz Ali Khan',
-            'email'=>'farazmsi2014@gmail.com',
+        $registration =  \App\Models\Registration::create([
+            'name' => 'ABC',
+            'email'=>'abc@gmail.com',
             'gender'=>'M',
-            'address'=>'I 42 A Abul Fazal Enclave Jamia Nagar',
+            'address'=>'Delhi',
             'dob'=>'1995-09-28',
             'password'=>'pqr'
             
@@ -26,35 +26,35 @@ class HomeController extends Controller
             
         ]);
 
-        return $customers;
+        return $registration;
     }
 
     public function show($id)
     {
-        $customers = \App\Models\Customer::find($id);
+        $registration = \App\Models\Registration::find($id);
 
-        return $customers;
+        return $registration;
     }
 
     public function edit($id)
     {
-        $customers = \App\Models\Customer::find($id);
-        $customers->name='Bhavjot Singh';
-        $customers->email='xyz@gmail.com';
-        $customers->gender='M';
-        $customers->address='XYZ';
-        $customers->dob='1996-02-02';
-        $customers->password='mno';
-        $customers->save();
-        return $customers;
+        $registration = \App\Models\Registration::find($id);
+        $registration->name='DEF';
+        $registration->email='def@gmail.com';
+        $registration->gender='M';
+        $registration->address='Punjab';
+        $registration->dob='1996-02-02';
+        $registration->password='mno';
+        $registration->save();
+        return $registration;
     }
 
     public function delete($id)
     {
-        $customers = \App\Models\Customer::find($id);
+        $registration = \App\Models\Registration::find($id);
 
-        $customers->delete();
+        $registration->delete();
 
-        return 'customer deleted';
+        return 'registration deleted';
     }
 }
