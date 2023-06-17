@@ -2,6 +2,8 @@
 
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\IndexController;
+
 use Inertia\Inertia;
 
 /*
@@ -15,8 +17,13 @@ use Inertia\Inertia;
 |
 */
 // 
-
-Route::get('/registration-create', [App\Http\Controllers\HomeController::class, 'create']);
-Route::get('/registration/{id}', [App\Http\Controllers\HomeController::class, 'show']);
-Route::get('/registration-edit/{id}', [App\Http\Controllers\HomeController::class, 'edit']);
-Route::get('/registration-delete/{id}', [App\Http\Controllers\HomeController::class, 'delete']);
+Route::get('/data',[IndexController::class,'index']);
+/*Route::get('/register',[RegistrationController::class,'index']);
+Route::post('/register',[RegistrationController::class,'register']);
+Route::get('/customer',[CustomerController::class,'index']);
+Route::post('/customer',[CustomerController::class,'register']);
+Route::get('/customer-create', [App\Http\Controllers\HomeController::class, 'create']);
+Route::get('/customer/{id}', [App\Http\Controllers\HomeController::class, 'show']);
+Route::get('/customer-edit/{id}', [App\Http\Controllers\HomeController::class, 'edit']);
+Route::get('/customer-delete/{id}', [App\Http\Controllers\HomeController::class, 'delete']);
+*/
