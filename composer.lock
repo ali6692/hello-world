@@ -3499,16 +3499,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.11.18",
+            "version": "v0.11.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "4f00ee9e236fa6a48f4560d1300b9c961a70a7ec"
+                "reference": "e9ac4fae08b0bc7fb4f8391b220daa1dc55f03bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/4f00ee9e236fa6a48f4560d1300b9c961a70a7ec",
-                "reference": "4f00ee9e236fa6a48f4560d1300b9c961a70a7ec",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/e9ac4fae08b0bc7fb4f8391b220daa1dc55f03bf",
+                "reference": "e9ac4fae08b0bc7fb4f8391b220daa1dc55f03bf",
                 "shasum": ""
             },
             "require": {
@@ -3536,8 +3536,12 @@
             ],
             "type": "library",
             "extra": {
+                "bamarni-bin": {
+                    "bin-links": false,
+                    "forward-command": false
+                },
                 "branch-alias": {
-                    "dev-main": "0.11.x-dev"
+                    "dev-0.11": "0.11.x-dev"
                 }
             },
             "autoload": {
@@ -3569,9 +3573,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.11.18"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.11.23"
             },
-            "time": "2023-05-23T02:31:11+00:00"
+            "time": "2026-01-30T05:01:10+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
